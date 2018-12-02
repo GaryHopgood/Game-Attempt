@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space) && (Time.time > nextShot))
         {
-            Instantiate(GameObject.Find("Bullet"), transform.position, transform.rotation);
+            Instantiate(GameObject.Find("Bullet"), (transform.position + new Vector3(0.0f,0.0f,0.4f)), transform.rotation);
             nextShot = Time.time + fireRate;
         }
 
